@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        // int mid=(nums[0]+nums[nums.size()-1])/2;
+        //  return mid+0.5;
+        int mid=nums.size()/2;
+        return nums[mid]; // majority element always comes 
+        //at the middle position of an sorted array.
+        // return nums[(nums.size()-1)/2];
+    }
+    
+};
