@@ -1,0 +1,19 @@
+class Solution {
+public:
+    string reverseWords(string s) {
+        stringstream str(s);//Use stringstream For Extract Each Word
+        string word,ans="";
+        while(str>>word){
+            ans=word+" "+ans;
+        }
+        return ans.substr(0,ans.length()-1);
+    }
+};
+/*
+ 	word     space      pre_ans 		   new_ans
+
+		1st Itr:  	  	"the"  +  " "   +    ""         		"the "
+		2nd Itr: 	 	"sky"  +  " "   +    "the "			  	"sky the "
+		3rd Itr:  		"is"   +  " "   +    "sky the "		  	"is sky the " 
+		4th Itr: 		"blue" +  " "   +    "is sky the "		"blue is sky the "
+        */
