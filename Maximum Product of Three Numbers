@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int maximumProduct(vector<int>& nums) {
+        int n=nums.size();
+        sort(nums.begin(),nums.end());
+        int mx1=nums[n-1]*nums[n-2]*nums[n-3];
+        int mx2=nums[0]*nums[1]*nums[n-1];
+        int mx=max(mx1,mx2);
+        return mx;
+    }
+};
+// Either product of 3 biggest positive values will be maxProduct or if there are negative values then pick the 2 biggest negative values and multiply with biggest positive value
+
