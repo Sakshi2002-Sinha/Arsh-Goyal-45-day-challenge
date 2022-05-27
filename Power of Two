@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        for(int i=0;i<31;i++){
+            long long int pow_of_two = 1<<(i);
+            if(pow_of_two == n){
+                return true;
+            }
+            // if(pow_of_two > n){
+            //     return false;
+            // }
+        }
+        return false;
+    }
+};
+
+
+
